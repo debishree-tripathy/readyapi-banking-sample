@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d88fd0d2-04db-4147-a31e-57d3132bb657" created="3.61.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="SOAPBankingService" resourceRoot="" projectVersion="" updated="3.61.0 2025-06-17T10:42:49Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="5cf7c7e6-3004-45be-bef3-e25c3e6725d8" wsaVersion="NONE" name="BankingBinding" type="wsdl" bindingName="{http://example.com/banking}BankingBinding" soapVersion="1_1" anonymous="optional" definition="file:/Users/madgenius_adi/Work/readyapi-project/Corrected_BankingService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="fe7e0236-7504-4d88-82f6-c379739e8a27"/>
+    <con:definitionCache type="TEXT" rootPart="file:/Users/madgenius_adi/Work/readyapi-project/Corrected_BankingService.wsdl">
+      <con:part>
+        <con:url>file:/Users/madgenius_adi/Work/readyapi-project/Corrected_BankingService.wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions targetNamespace="http://example.com/banking" name="BankingService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.com/banking">
+  <!--Messages-->
+  <wsdl:message name="AddCustomerRequest">
+    <wsdl:part name="name" type="xsd:string"/>
+    <wsdl:part name="email" type="xsd:string"/>
+    <wsdl:part name="dob" type="xsd:string"/>
+    <wsdl:part name="panNumber" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="AddCustomerResponse">
+    <wsdl:part name="status" type="xsd:string"/>
+    <wsdl:part name="customerId" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="AddAccountRequest">
+    <wsdl:part name="accountId" type="xsd:string"/>
+    <wsdl:part name="customerId" type="xsd:string"/>
+    <wsdl:part name="type" type="xsd:string"/>
+    <wsdl:part name="balance" type="xsd:float"/>
+  </wsdl:message>
+  <wsdl:message name="AddAccountResponse">
+    <wsdl:part name="status" type="xsd:string"/>
+    <wsdl:part name="accountId" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="AddBranchRequest">
+    <wsdl:part name="branchId" type="xsd:string"/>
+    <wsdl:part name="name" type="xsd:string"/>
+    <wsdl:part name="ifsc" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="AddBranchResponse">
+    <wsdl:part name="status" type="xsd:string"/>
+    <wsdl:part name="message" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="AddKYCRequest">
+    <wsdl:part name="kycId" type="xsd:string"/>
+    <wsdl:part name="customerId" type="xsd:string"/>
+    <wsdl:part name="documentType" type="xsd:string"/>
+    <wsdl:part name="documentNumber" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="AddKYCResponse">
+    <wsdl:part name="status" type="xsd:string"/>
+    <wsdl:part name="message" type="xsd:string"/>
+  </wsdl:message>
+  <!--PortType-->
+  <wsdl:portType name="BankingPortType">
+    <wsdl:operation name="AddCustomer">
+      <wsdl:input message="tns:AddCustomerRequest"/>
+      <wsdl:output message="tns:AddCustomerResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input message="tns:AddAccountRequest"/>
+      <wsdl:output message="tns:AddAccountResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddBranch">
+      <wsdl:input message="tns:AddBranchRequest"/>
+      <wsdl:output message="tns:AddBranchResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddKYC">
+      <wsdl:input message="tns:AddKYCRequest"/>
+      <wsdl:output message="tns:AddKYCResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <!--Binding-->
+  <wsdl:binding name="BankingBinding" type="tns:BankingPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AddCustomer">
+      <soap:operation soapAction="addCustomer"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://example.com/banking"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://example.com/banking"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="addAccount"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://example.com/banking"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://example.com/banking"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBranch">
+      <soap:operation soapAction="addBranch"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://example.com/banking"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://example.com/banking"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddKYC">
+      <soap:operation soapAction="addKYC"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://example.com/banking"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://example.com/banking"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <!--Service-->
+  <wsdl:service name="BankingService">
+    <wsdl:port name="BankingPort" binding="tns:BankingBinding">
+      <soap:address location="http://localhost:8088/mockBankingService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8088/mockBankingService</con:endpoint>
+      <con:endpoint>http://localhost:8089/</con:endpoint>
+    </con:endpoints>
+    <con:operation id="804bb3e4-3a72-4d58-84d3-efeb0527a837" isOneWay="false" action="addAccount" name="AddAccount" bindingOperationName="AddAccount" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false">
+      <con:settings/>
+    </con:operation>
+    <con:operation id="0c2b2563-3bc5-486a-b3b2-b1309d11f115" isOneWay="false" action="addBranch" name="AddBranch" bindingOperationName="AddBranch" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false">
+      <con:settings/>
+    </con:operation>
+    <con:operation id="f987de7a-40c6-4bc6-8258-45d592749e6b" isOneWay="false" action="addCustomer" name="AddCustomer" bindingOperationName="AddCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false">
+      <con:settings/>
+    </con:operation>
+    <con:operation id="81165bd7-fba4-4d09-a89e-7ae4c09f2643" isOneWay="false" action="addKYC" name="AddKYC" bindingOperationName="AddKYC" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false">
+      <con:settings/>
+    </con:operation>
+  </con:interface>
+  <con:mockService id="ba86b52d-749f-4047-b479-47b1784d9fb7" port="8089" path="/" host="localhost" name="BankingSOAPMockService" addUnmatchedOperation="false">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:dataSources/>
+    <con:headerValidator type="NONE"/>
+    <con:mockOperation name="AddAccount" id="421ebb30-023e-4d2b-a751-d4951f51c732" interface="BankingBinding" operation="AddAccount">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:requestRouteScript/>
+      <con:response name="Response 1" id="86ce2474-d22e-4bb8-bb5d-c37dd37efb3f" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://example.com/banking">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:AddAccountResponse>
+         <status>?</status>
+         <accountId>?</accountId>
+      </ban:AddAccountResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="addAccount"/>
+      </con:response>
+    </con:mockOperation>
+    <con:mockOperation name="AddBranch" id="84944f0c-ad18-4d06-8161-34a5c012ed21" interface="BankingBinding" operation="AddBranch">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:requestRouteScript/>
+      <con:response name="Response 1" id="e23108f3-ab58-4836-b96f-cf59264e3f89" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://example.com/banking">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:AddBranchResponse>
+         <status>?</status>
+         <message>?</message>
+      </ban:AddBranchResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="addBranch"/>
+      </con:response>
+    </con:mockOperation>
+    <con:mockOperation name="AddCustomer" id="05032632-d470-46f8-88a8-34e34e0ef255" interface="BankingBinding" operation="AddCustomer">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:requestRouteScript/>
+      <con:response name="Response 1" id="17c7853a-a973-436a-a276-9fbddfd48e99" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://example.com/banking">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:AddCustomerResponse>
+         <status>?</status>
+         <customerId>?</customerId>
+      </ban:AddCustomerResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="addCustomer"/>
+      </con:response>
+    </con:mockOperation>
+    <con:mockOperation name="AddKYC" id="ff7ada7d-b8d7-49bf-a45a-4adf8c3b6e51" interface="BankingBinding" operation="AddKYC">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:requestRouteScript/>
+      <con:response name="Response 1" id="418d9917-a630-40ab-9df7-0ef7a19dd1b5" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://example.com/banking">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:AddKYCResponse>
+         <status>?</status>
+         <message>?</message>
+      </ban:AddKYCResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="addKYC"/>
+      </con:response>
+    </con:mockOperation>
+  </con:mockService>
+  <con:mockService id="1a5a3ece-c70d-46de-8a2b-d75f3048979a" port="8080" path="/" host="localhost" name="SOAP Virtual Service 1" addUnmatchedOperation="false">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:dataSources/>
+    <con:headerValidator type="NONE"/>
+    <con:mockOperation name="AddAccount" id="62e8783e-efdc-4c0a-abe4-bcf177a6331d" interface="BankingBinding" operation="AddAccount">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:requestRouteScript/>
+      <con:response name="Response 1" id="63caaf64-4051-4375-9af9-75f2756502b5" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://example.com/banking">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:AddAccountResponse>
+         <status>?</status>
+         <accountId>?</accountId>
+      </ban:AddAccountResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="addAccount"/>
+      </con:response>
+    </con:mockOperation>
+  </con:mockService>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

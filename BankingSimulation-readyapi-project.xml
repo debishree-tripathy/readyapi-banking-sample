@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d3f02990-c139-4e54-843a-95a21e6a0585" created="3.61.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="BankingSimulation" resourceRoot="" projectVersion="" updated="3.61.0 2025-06-17T10:42:49Z" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="bc9d9d3a-e159-4d14-81d4-aa07433ea9b8" name="onboarding" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings id="50ebc0ea-f310-49e8-a1e2-1225c895a49d"/><con:definitionCache type="TEXT" rootPart="onboarding.json"><con:part><con:url>onboarding.json</con:url><con:content>{"openapi":"3.1.0","info":{"title":"onboarding","description":"","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/customer":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/accounts":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/branch":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/kyc":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content><con:type>https://swagger.io/openapiv3/specification</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8088/</con:endpoint></con:endpoints><con:resource name="customer" path="customer" id="0c6ba529-4019-487a-a6ce-725c3b71766e"><con:settings/><con:parameters/><con:method name="Method 1" id="69c48fc4-a32e-451a-a1c6-55e6681487fb" method="POST"><con:settings/><con:parameters/><con:request name="Request 1" id="16dd33ef-b0dc-4b65-af3a-9dbd8e0b23b0" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8088/</con:endpoint><con:request>{
+  "name": "Shiva Shankar",
+  "email": "shiva@@gmail",
+  "dob": "1994-02-10",
+  "panNumber": "PQRSX9876Z"
+}
+</con:request><con:originalUri>http://localhost/customer</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder/></con:request></con:method><con:method name="Method 2" id="8bf4a49f-68df-4d69-a878-30d50baafe13" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="3b3836bc-e194-4cf2-843f-9f4d8af50767" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8088/</con:endpoint><con:request/><con:originalUri>http://localhost/customer</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="accounts" path="accounts" id="1a3db3af-db00-457a-994f-cfbb49400de7"><con:settings/><con:parameters/><con:method name="Method 1" id="a07b661c-c47d-4cb4-a1d7-edb5848fb8a7" method="POST"><con:settings/><con:parameters/><con:request name="Request 1" id="34c435f3-f313-41b7-93f9-8d9e63c85dec" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8088/</con:endpoint><con:request>{
+  "accountId": "ACC001",
+  "customerId": "CUST001",
+  "type": "savings",
+  "balance": 5000
+}</con:request><con:originalUri>http://localhost/accounts</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method><con:method name="Method 2" id="d3f773ca-b4a3-45da-9875-c68a0f7b7509" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="2d780855-622e-4e6b-a384-6342d81309ff" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8088/</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="branch" path="branch" id="b20af000-bc5d-4be5-977b-ec4702abb371"><con:settings/><con:parameters/><con:method name="Method 1" id="80b61997-0ce3-415e-afc6-33bb5dee5c7b" method="POST"><con:settings/><con:parameters/><con:request name="Request 1" id="49ef2465-6d99-4ffd-a68e-f3a241a9362e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8088/</con:endpoint><con:request>{
+  "branchId": "BR001",
+  "name": "Mumbai Central",
+  "ifsc": "BANK0001234"
+}</con:request><con:originalUri>http://localhost/branch</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method><con:method name="Method 2" id="cbf51515-57d2-4bce-b2e9-758d0d6e842c" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="c1d6fc61-68a8-4941-93b9-f03eb3e1b957" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8088/</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="kyc" path="kyc" id="eb036d34-ea70-488b-96ef-6b407f2c1a21"><con:settings/><con:parameters/><con:method name="Method 1" id="7adc3f5a-d6bc-4c50-946e-fae01f1542e6" method="POST"><con:settings/><con:parameters/><con:request name="Request 1" id="668ee1ee-9930-4697-8ed7-b138c11eac79" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8088/</con:endpoint><con:request>{
+  "kycId": "KYC001",
+  "customerId": "CUST001",
+  "documentType": "Aadhar",
+  "documentNumber": "1234-5678-9012"
+}
+</con:request><con:originalUri>http://localhost/kyc</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method><con:method name="Method 2" id="9bea480a-dc82-475a-8c7f-e33bbda69d45" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="ee802e84-a308-4ada-a40b-b39d452df122" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8088/</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource></con:interface><con:restMockService id="8c85f325-752c-432c-9bc6-142a01cf5dd2" port="8088" path="/banking" host="localhost" name="onboarding Virtual Service" addUnmatchedOperation="false"><con:settings/><con:properties/><con:constraints><con:congestion>0</con:congestion><con:inputBandwidth>-1</con:inputBandwidth><con:outputBandwidth>-1</con:outputBandwidth><con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity><con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity><con:virtError><con:start>0</con:start><con:endless>true</con:endless></con:virtError></con:constraints><con:headerValidator type="NONE"/><con:restMockAction name="/addCustomer" method="POST" resourcePath="/customer" id="7b4dd4c2-2caa-4381-a791-078cfdc952a7"><con:settings/><con:defaultResponse>success</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>success</con:name><con:type>JSONPath</con:type><con:query>case=</con:query><con:match>success</con:match><con:response>success</con:response></con:query><con:query><con:name>validation</con:name><con:type>JSONPath</con:type><con:query>case=</con:query><con:match>validate</con:match><con:response>Validation Error</con:response><con:disabled>true</con:disabled></con:query><con:query><con:name>error</con:name><con:type>JSONPath</con:type><con:query>case=</con:query><con:match>error</con:match><con:response>error</con:response></con:query></con:dispatchConfig><con:dispatchPath>import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
+def request = mockRequest.getRequestContent()
+log.info "Incoming: " + request
+
+def slurper = new JsonSlurper()
+def data
+
+try {
+    data = slurper.parseText(request)
+} catch(Exception e) {
+    mockOperationResult.responseContent = JsonOutput.toJson([message: "Invalid JSON"])
+    return "Missing or Invalid Fields"
+}
+
+// Validate required fields
+def requiredFields = ['name', 'email', 'dob', 'panNumber']
+if (!requiredFields.every { data.containsKey(it) }) {
+    mockOperationResult.responseContent = JsonOutput.toJson([message: "Missing required fields"])
+    return "Missing or Invalid Fields"
+}
+
+// Validate email
+def emailRegex = /^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$/
+if (!(data.email ==~ emailRegex)) {
+    mockOperationResult.responseContent = JsonOutput.toJson([message: "Invalid email format"])
+    return "Invalid Email"
+}
+
+// Success response
+mockOperationResult.responseContent = JsonOutput.prettyPrint(JsonOutput.toJson([
+    message: "Customer created successfully",
+    name: data.name,
+    panNumber: data.panNumber
+]))
+
+return "Customer Created"
+</con:dispatchPath><con:dispatchXPath/><con:parameterDispatcherRuleContainer/><con:requestRouteScript/><con:response name="success" id="94d85bda-6781-4b3d-a32c-63b0132f121a" httpResponseStatus="200" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" mediaType="application/json" dataSource=""><con:settings/><con:script>import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
+def request = mockRequest.getRequestContent()
+log.info "Incoming: " + request
+
+def slurper = new JsonSlurper()
+def data
+
+try {
+    data = slurper.parseText(request)
+} catch(Exception e) {
+    mockOperationResult.responseContent = JsonOutput.toJson([message: "Invalid JSON"])
+    return "Missing or Invalid Fields"
+}
+
+// Validate required fields
+def requiredFields = ['name', 'email', 'dob', 'panNumber']
+if (!requiredFields.every { data.containsKey(it) }) {
+    mockOperationResult.responseContent = JsonOutput.toJson([message: "Missing required fields"])
+    return "Missing or Invalid Fields"
+}
+
+// Validate email
+def emailRegex = /^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$/
+if (!(data.email ==~ emailRegex)) {
+    mockOperationResult.responseContent = JsonOutput.toJson([message: "Invalid email format"])
+    return "Invalid Email"
+}
+
+// Success response
+mockOperationResult.responseContent = JsonOutput.prettyPrint(JsonOutput.toJson([
+    message: "Customer created successfully",
+    name: data.name,
+    panNumber: data.panNumber
+]))
+
+return "Customer Created"
+</con:script><con:responseContent/></con:response></con:restMockAction><con:restMockAction name="/customer" method="GET" resourcePath="/customer" id="803e1225-dcf9-4757-a184-067de8c7e643"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchPath>// Define a property to track the counter
+def counter = mockRequest.mockOperation.mockService.getPropertyValue("responseCounter") as Integer
+
+// Initialize if null
+if (counter == null) {
+    counter = 0
+}
+
+// Decide response based on counter value
+def responseName
+switch(counter) {
+    case 0:
+        responseName = "Success"
+        break
+    case 1:
+        responseName = "ValidationError"
+        break
+    case 2:
+        responseName = "ServerError"
+        break
+    default:
+        responseName = "Success"  // Default response after 3 cycles
+}
+
+// Increment counter
+counter = (counter + 1) % 3  // Loop through 0 → 1 → 2 → 0 ...
+
+// Save counter back to service property
+mockRequest.mockOperation.mockService.setPropertyValue("responseCounter", counter.toString())
+
+// Return the selected response
+return responseName
+</con:dispatchPath><con:dispatchXPath/><con:parameterDispatcherRuleContainer/><con:requestRouteScript/><con:response name="resp2" id="bade6d35-99d6-4cc6-ab86-0a87af4f5bd6" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource=""><con:settings/><con:responseContent>{ "customers": [ { "customerId": "101", "name": "Alice Johnson", "accountType": "Savings", "balance": 25000.75, "currency": "INR" }, { "customerId": "102", "name": "Bob Smith", "accountType": "Checking", "balance": 15890.50, "currency": "INR" } ] } </con:responseContent></con:response></con:restMockAction><con:restMockAction name="/accounts" method="POST" resourcePath="/accounts" id="96ee84b7-0c62-4d44-a1a9-81ea58e7591f"><con:settings/><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>success</con:name><con:type>JSONPath</con:type><con:query>case=</con:query><con:match>success</con:match><con:response>resp3</con:response></con:query><con:query><con:name>error</con:name><con:type>JSONPath</con:type><con:query>case=</con:query><con:match>error</con:match><con:response>error</con:response></con:query></con:dispatchConfig><con:dispatchPath>// Just return the raw request body as-is
+mockOperationResult.responseContent = mockRequest.requestContent
+return "Echo Response"
+</con:dispatchPath><con:dispatchXPath/><con:parameterDispatcherRuleContainer/><con:requestRouteScript/></con:restMockAction><con:restMockAction name="/accounts" method="GET" resourcePath="/accounts" id="36d6b7ba-2977-4143-8fe4-1f162dfc3eeb"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:requestRouteScript/><con:response name="resp4" id="5558c222-c43e-435e-8c7f-2d2bbecd7a1d" httpResponseStatus="200" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>
+{
+  "accounts": [
+    {
+      "accountId": "A1001",
+      "customerId": "101",
+      "type": "Savings",
+      "balance": 25000.75,
+      "currency": "INR"
+    },
+    {
+      "accountId": "A1002",
+      "customerId": "102",
+      "type": "Checking",
+      "balance": 15890.50,
+      "currency": "INR"
+    }
+  ]
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/branch" method="POST" resourcePath="/branch" id="ab27d1e4-8faa-4974-a3a2-30473c27c46a"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:requestRouteScript/><con:response name="resp5" id="1429c411-e543-4de2-98a6-bacba23f4781" httpResponseStatus="202" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource=""><con:settings/><con:responseContent>{
+  "status": "success",
+  "message": "Branch added successfully"
+}
+</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/branch" method="GET" resourcePath="/branch" id="6ed90bb3-6d3c-4c33-80b1-4ab58571476e"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:requestRouteScript/><con:response name="resp6" id="01c5100c-118c-460b-9987-018738bde238" httpResponseStatus="200" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "branches": [
+    {
+      "branchId": "BR001",
+      "name": "Andheri West Branch",
+      "city": "Mumbai",
+      "ifsc": "BANK000001"
+    },
+    {
+      "branchId": "BR002",
+      "name": "Koramangala Branch",
+      "city": "Bangalore",
+      "ifsc": "BANK000002"
+    }
+  ]
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/kyc" method="POST" resourcePath="/kyc" id="3a46e379-dfdd-4f13-b03f-bd0fba7554d6"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:requestRouteScript/><con:response name="resp7" id="9e82c21f-b35c-4c66-9e85-686a1006b45b" httpResponseStatus="201" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource=""><con:settings/><con:responseContent>{
+  "status": "success",
+  "message": "KYC successfully",
+  "customerId": "CUST001"
+}
+</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/kyc" method="GET" resourcePath="/kyc" id="aa36702c-cefe-404c-b43b-90a4650f920f"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:requestRouteScript/><con:response name="resp8" id="6ed83726-cf37-452e-b5cf-b1d777d80de4" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource=""><con:settings/><con:responseContent>{
+  "branchId": "BR001",
+  "name": "Andheri West Branch",
+  "address": "102, Link Road, Andheri West, Mumbai",
+  "contact": "+91-2225558899",
+  "ifsc": "BANK000001"
+}</con:responseContent></con:response></con:restMockAction><con:conditionalMatchConfiguration><con:validateSignature>true</con:validateSignature><con:validateSignatureHeaders>false</con:validateSignatureHeaders></con:conditionalMatchConfiguration></con:restMockService><con:restMockService id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4" port="8081" path="/" host="localhost" name="test_script" addUnmatchedOperation="false"><con:settings/><con:properties/><con:constraints><con:congestion>0</con:congestion><con:inputBandwidth>-1</con:inputBandwidth><con:outputBandwidth>-1</con:outputBandwidth><con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity><con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity><con:virtError><con:start>0</con:start><con:endless>true</con:endless></con:virtError></con:constraints><con:headerValidator type="NONE"/><con:restMockAction name="/createCustomer" method="POST" resourcePath="/createCustomer" id="f7de604a-fd5e-4f0f-b311-a4bbc873724c"><con:settings/><con:defaultResponse>error</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchConfig/><con:dispatchPath><![CDATA[import groovy.json.JsonSlurper
+
+// Step 1: Read the request body
+def requestBody = mockRequest.getRequestContent()
+if (requestBody == null || requestBody.trim().isEmpty()) {
+    context.responseContent = '{"status": "validationfailed", "errors": ["Empty request body"]}'
+    return "validationfailed"
+}
+
+// Step 2: Parse JSON
+def json
+try {
+    json = new JsonSlurper().parseText(requestBody)
+} catch (Exception e) {
+    context.responseContent = '{"status": "validationfailed", "errors": ["Invalid JSON format"]}'
+    return "validationfailed"
+}
+
+// Step 3: Extract fields
+def name = json.name
+def email = json.email
+def dob = json.dob
+def pan = json.panNumber
+
+def errors = []
+
+// Validate name (only alphabets and space, min 2 chars)
+if (!name || !(name ==~ /^[A-Za-z ]{2,}$/)) {
+    errors << "Invalid or missing name"
+}
+
+// Validate email (basic format)
+if (!email || !(email ==~ /^[\w.-]+@[\w.-]+\.\w{2,}$/)) {
+    errors << "Invalid or missing email"
+}
+
+// Validate dob (format: YYYY-MM-DD)
+if (!dob || !(dob ==~ /^\d{4}-\d{2}-\d{2}$/)) {
+    errors << "Invalid or missing date of birth"
+}
+
+// Validate PAN (format: 5 letters, 4 digits, 1 letter)
+if (!pan || !(pan ==~ /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/)) {
+    errors << "Invalid or missing PAN number"
+}
+
+// Step 4: Return errors if any
+if (errors) {
+    def errorJson = [
+        status: "validationfailed",
+        errors: errors
+    ]
+    context.responseContent = new groovy.json.JsonBuilder(errorJson).toPrettyString()
+    return "validationfailed"
+}
+
+// Step 5: Generate Customer Number
+def project = mockOperation.mockService.project
+def lastNumberProp = "lastCustomerNumber"
+def lastNumber = project.hasProperty(lastNumberProp) ? project.getPropertyValue(lastNumberProp)?.toInteger() : 100000
+def nextNumber = lastNumber + 1
+def customerNumber = "CUST${nextNumber}"
+
+// Update project property
+project.setPropertyValue(lastNumberProp, nextNumber.toString())
+
+// Set context value for dynamic response
+context.customerNumber = customerNumber
+
+return "success"
+]]></con:dispatchPath><con:dispatchXPath/><con:parameterDispatcherRuleContainer/><con:requestRouteScript/><con:response name="error" id="80f71dbb-0183-4467-b5b5-6115fe64969e" httpResponseStatus="500" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource=""><con:settings/><con:responseContent>{
+"status": "failed"
+"message": "server side error"
+	}</con:responseContent></con:response><con:response name="validationfailed" id="24445b09-2b9a-49c4-b657-b2be8738d195" httpResponseStatus="400" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource=""><con:settings/><con:script/><con:responseContent>{
+  "status": "validationfailed",
+  "errors": ${=context.validationErrors}
+}
+</con:responseContent></con:response><con:response name="success" id="ea4bbc99-f6a3-46ef-88d4-6d92c6fd255f" httpResponseStatus="200" dataSource="" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570"><con:settings/><con:script/><con:responseContent>{
+  "status": "success",
+  "customerNumber": "${=context.customerNumber}"
+}
+</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/addbranch" method="POST" resourcePath="/addbranch" id="7f63a36d-74d0-4d2e-8a82-00b8172734e3"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:requestRouteScript/><con:response name="resp1" id="2692cce8-ee47-4d78-bf29-a4aafaea88e9" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:script>import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
+def reqBody = mockRequest?.getRequestContent()
+
+// Check for empty body
+if (!reqBody || reqBody.trim().isEmpty()) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Empty request body"
+    ])
+    return "ValidationError"
+}
+
+def json
+try {
+    json = new JsonSlurper().parseText(reqBody)
+} catch (Exception e) {
+    log.error "Invalid JSON: ${e.message}"
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid JSON format"
+    ])
+    return "ValidationError"
+}
+
+// Required fields check
+if (!json.branchId || !json.name || !json.ifsc) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "All fields (branchId, name, ifsc) are required"
+    ])
+    return "ValidationError"
+}
+
+// Validate branchId (BR + digits)
+def branchRegex = /^BR\d+$/
+if (!(json.branchId ==~ branchRegex)) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid branchId format. It must start with 'BR' followed by digits"
+    ])
+    return "ValidationError"
+}
+
+// Validate IFSC: 4 letters + 0 + 6 digits
+def ifscRegex = /^[A-Z]{4}0\d{6}$/
+if (!(json.ifsc ==~ ifscRegex)) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid IFSC format. It must be 4 letters, 0, and 6 digits (e.g., BANK0001234)"
+    ])
+    return "ValidationError"
+}
+
+// All validations passed
+mockResponse.responseContent = JsonOutput.toJson([
+    status: "success",
+    message: "Branch validation passed",
+    data: json
+])
+return "Success"
+</con:script><con:responseContent/></con:response></con:restMockAction><con:restMockAction name="/createaccount" method="POST" resourcePath="/createaccount" id="88873fd7-1e12-4a57-a7d9-358d2a07686f"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:requestRouteScript/><con:response name="resp3" id="ce759435-4504-4e7c-8362-d7e018c5a470" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:script>import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
+def reqBody = mockRequest?.getRequestContent()
+
+if (!reqBody || reqBody.trim().isEmpty()) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Empty request body"
+    ])
+    return "ValidationError"
+}
+
+def json
+try {
+    json = new JsonSlurper().parseText(reqBody)
+} catch (Exception e) {
+    log.error "Invalid JSON: ${e.message}"
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid JSON format"
+    ])
+    return "ValidationError"
+}
+
+// Top-level validations
+if (!json.accountId || !json.accountType || !json.customer || !json.branch || json.initialDeposit == null) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Missing required fields"
+    ])
+    return "ValidationError"
+}
+
+// accountId: starts with ACC
+if (!(json.accountId ==~ /^ACC\d+$/)) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid accountId. Should start with ACC followed by digits"
+    ])
+    return "ValidationError"
+}
+
+// accountType: either Savings or Current
+if (!(json.accountType in ["Savings", "Current"])) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "accountType must be 'Savings' or 'Current'"
+    ])
+    return "ValidationError"
+}
+
+// Validate customer fields
+def customer = json.customer
+if (!customer.name || !customer.email || !customer.dob || !customer.pan) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Missing customer details"
+    ])
+    return "ValidationError"
+}
+
+def emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
+def panRegex = /^[A-Za-z0-9]{10}$/
+def dobRegex = /^\d{4}-\d{2}-\d{2}$/
+
+if (!(customer.email ==~ emailRegex)) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid customer email"
+    ])
+    return "ValidationError"
+}
+
+if (!(customer.pan ==~ panRegex)) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid customer PAN. Must be 10 alphanumeric characters"
+    ])
+    return "ValidationError"
+}
+
+if (!(customer.dob ==~ dobRegex)) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid DOB format. Use YYYY-MM-DD"
+    ])
+    return "ValidationError"
+}
+
+// Validate branch
+def branch = json.branch
+if (!branch.branchId || !branch.ifsc) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Branch details are required"
+    ])
+    return "ValidationError"
+}
+
+def branchRegex = /^BR\d+$/
+def ifscRegex = /^[A-Z]{4}0\d{6}$/
+
+if (!(branch.branchId ==~ branchRegex)) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid branchId. Should start with BR and digits"
+    ])
+    return "ValidationError"
+}
+
+if (!(branch.ifsc ==~ ifscRegex)) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Invalid IFSC format"
+    ])
+    return "ValidationError"
+}
+
+// Deposit must be at least 1000
+if (json.initialDeposit &lt; 1000) {
+    mockResponse.responseContent = JsonOutput.toJson([
+        status: "fail",
+        message: "Minimum initial deposit must be ₹1000"
+    ])
+    return "ValidationError"
+}
+
+// ✅ Everything is valid
+mockResponse.responseContent = JsonOutput.toJson([
+    status: "success",
+    message: "Account created successfully",
+    data: json
+])
+return "Success"
+</con:script><con:responseContent/></con:response></con:restMockAction><con:conditionalMatchConfiguration><con:validateSignature>false</con:validateSignature><con:validateSignatureHeaders>false</con:validateSignatureHeaders></con:conditionalMatchConfiguration></con:restMockService><con:properties><con:property><con:name>lastCustomerNumber</con:name><con:value>100024</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:authRepository/><con:tags/></con:soapui-project>

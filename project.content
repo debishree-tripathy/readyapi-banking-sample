@@ -3,4 +3,5 @@ onboarding\accounts.xml
 onboarding\branch.xml
 onboarding\kyc.xml
 onboarding-Virtual-Service\%2Fgetcustomer.xml
+onboarding-Virtual-Service\%2Fgetcustomerbal.xml
 test_script\%2FcreateCustomer.xml

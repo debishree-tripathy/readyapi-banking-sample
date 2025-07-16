@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:restMockService xmlns:con="http://eviware.com/soapui/config" id="8c85f325-752c-432c-9bc6-142a01cf5dd2" port="8088" path="/banking" host="localhost" name="onboarding Virtual Service" addUnmatchedOperation="false">
-  <con:settings id="f774e9d6-1fc5-4a45-a9e8-0ed7d1f54ea8">
+  <con:settings id="ee491942-231d-44b7-b30d-37defd1ac2ca">
     <con:setting id="8c85f325-752c-432c-9bc6-142a01cf5dd2fileName">onboarding-Virtual-Service</con:setting>
   </con:settings>
   <con:properties/>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:RestService" id="bc9d9d3a-e159-4d14-81d4-aa07433ea9b8" name="onboarding" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification">
+  <con:settings id="50ebc0ea-f310-49e8-a1e2-1225c895a49d">
+    <con:setting id="bc9d9d3a-e159-4d14-81d4-aa07433ea9b8fileName">onboarding</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="onboarding.json">
+    <con:part>
+      <con:url>onboarding.json</con:url>
+      <con:content>{"openapi":"3.1.0","info":{"title":"onboarding","description":"","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/customer":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/accounts":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/branch":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/kyc":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://localhost:8088/</con:endpoint>
+  </con:endpoints>
+</con:interface>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="branch" path="branch" id="b20af000-bc5d-4be5-977b-ec4702abb371">
+  <con:settings id="f0ad515c-91b0-4eb2-b937-9b5bf1d72cce">
+    <con:setting id="b20af000-bc5d-4be5-977b-ec4702abb371fileName">branch</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="80b61997-0ce3-415e-afc6-33bb5dee5c7b" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="49ef2465-6d99-4ffd-a68e-f3a241a9362e" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request>{
+  "branchId": "BR001",
+  "name": "Mumbai Central",
+  "ifsc": "BANK0001234"
+}</con:request>
+      <con:originalUri>http://localhost/branch</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="cbf51515-57d2-4bce-b2e9-758d0d6e842c" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="c1d6fc61-68a8-4941-93b9-f03eb3e1b957" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

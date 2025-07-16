@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockService xmlns:con="http://eviware.com/soapui/config" id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4" port="8081" path="/" host="localhost" name="test_script" addUnmatchedOperation="false">
+  <con:settings id="79b4898a-e7e2-4d76-84d7-eceb9be23b97">
+    <con:setting id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4fileName">test_script</con:setting>
+  </con:settings>
+  <con:properties/>
+  <con:constraints>
+    <con:congestion>0</con:congestion>
+    <con:inputBandwidth>-1</con:inputBandwidth>
+    <con:outputBandwidth>-1</con:outputBandwidth>
+    <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+    <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+    <con:virtError>
+      <con:start>0</con:start>
+      <con:endless>true</con:endless>
+    </con:virtError>
+  </con:constraints>
+  <con:headerValidator type="NONE"/>
+  <con:conditionalMatchConfiguration>
+    <con:validateSignature>false</con:validateSignature>
+    <con:validateSignatureHeaders>false</con:validateSignatureHeaders>
+  </con:conditionalMatchConfiguration>
+</con:restMockService>

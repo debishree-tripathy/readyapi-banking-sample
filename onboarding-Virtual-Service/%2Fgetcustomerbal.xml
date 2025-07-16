@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" name="/getcustomerbal" method="GET" resourcePath="/getcustomerbal" id="b59b32d7-2a07-4a75-add0-8ada6c620521">
+  <con:settings id="2de239ab-ccce-4d59-a693-14b29dbcd82f">
+    <con:setting id="803e1225-dcf9-4757-a184-067de8c7e643fileName">%2Fgetcustomer</con:setting>
+    <con:setting id="b59b32d7-2a07-4a75-add0-8ada6c620521fileName">%2Fgetcustomerbal</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchPath>import groovy.sql.Sql
+import groovy.json.JsonBuilder
+
+def dbUrl = "jdbc:mysql://127.0.0.1:3306/banking?useSSL=false"
+def user = "root"
+def pass = "root"
+def driver = "com.mysql.cj.jdbc.Driver"
+
+try {
+    def sql = Sql.newInstance(dbUrl, user, pass, driver)
+    def customers = sql.rows("SELECT * FROM customers")
+    def json = new JsonBuilder(customers).toPrettyString()
+
+    context.setProperty("customerResponse", json)
+
+    return "Response 1"
+} catch (Exception e) {
+    context.setProperty("customerResponse", "{\"error\": \"${e.message}\"}")
+    return "Response 1"
+}</con:dispatchPath>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer/>
+  <con:requestRouteScript/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="cc74101e-5cab-4252-be96-0e6ccb39c0ca" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:script>def json = context.getProperty("customerResponse")
+
+mockResponse.responseHeaders = ["Content-Type": ["application/json"]]
+mockResponse.responseContent = json</con:script>
+    <con:responseContent>[
+    {
+        "id": 1,
+        "name": "Aditya Kumar",
+        "email": "aditya@email.com",
+        "balance": 5234.78,
+        "status": "active"
+    },
+    {
+        "id": 2,
+        "name": "Debbie R",
+        "email": "debbie@email.com",
+        "balance": 3400.00,
+        "status": "active"
+    },
+    {
+        "id": 3,
+        "name": "John Doe",
+        "email": "john.doe@email.com",
+        "balance": 0.00,
+        "status": "deactivated"
+    },
+    {
+        "id": 4,
+        "name": "Anjali Sharma",
+        "email": "anjali.sharma@example.com",
+        "balance": 15000.00,
+        "status": "active"
+    },
+    {
+        "id": 5,
+        "name": "Ravi Verma",
+        "email": "ravi.verma@example.com",
+        "balance": 8800.50,
+        "status": "active"
+    },
+    {
+        "id": 6,
+        "name": "Meera Das",
+        "email": "meera.das@example.com",
+        "balance": 0.00,
+        "status": "inactive"
+    },
+    {
+        "id": 7,
+        "name": "Karan Kapoor",
+        "email": "karan.kapoor@example.com",
+        "balance": 350.75,
+        "status": "active"
+    },
+    {
+        "id": 8,
+        "name": "Sneha Iyer",
+        "email": "sneha.iyer@example.com",
+        "balance": 23500.00,
+        "status": "active"
+    },
+    {
+        "id": 9,
+        "name": "Amitabh Sen",
+        "email": "amitabh.sen@example.com",
+        "balance": 5000.00,
+        "status": "deactivated"
+    },
+    {
+        "id": 10,
+        "name": "Deepika Rao",
+        "email": "deepika.rao@example.com",
+        "balance": 100.00,
+        "status": "active"
+    },
+    {
+        "id": 11,
+        "name": "Zaid Khan",
+        "email": "zaid.khan@example.com",
+        "balance": 970.30,
+        "status": "active"
+    },
+    {
+        "id": 12,
+        "name": "Priya Mehta",
+        "email": "priya.mehta@example.com",
+        "balance": 6750.00,
+        "status": "inactive"
+    },
+    {
+        "id": 13,
+        "name": "Rahul Jain",
+        "email": "rahul.jain@example.com",
+        "balance": 1420.00,
+        "status": "active"
+    }
+]</con:responseContent>
+    <con:header>
+      <con:name>Content-Type</con:name>
+      <con:value>application/json</con:value>
+    </con:header>
+  </con:response>
+</con:restMockAction>

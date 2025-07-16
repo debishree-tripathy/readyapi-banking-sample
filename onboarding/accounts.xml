@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="accounts" path="accounts" id="1a3db3af-db00-457a-994f-cfbb49400de7">
+  <con:settings id="9441e442-443c-4f61-a266-a9711cf1d581">
+    <con:setting id="1a3db3af-db00-457a-994f-cfbb49400de7fileName">accounts</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="a07b661c-c47d-4cb4-a1d7-edb5848fb8a7" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="34c435f3-f313-41b7-93f9-8d9e63c85dec" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request>{
+  "accountId": "ACC001",
+  "customerId": "CUST001",
+  "type": "savings",
+  "balance": 5000
+}</con:request>
+      <con:originalUri>http://localhost/accounts</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="d3f773ca-b4a3-45da-9875-c68a0f7b7509" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="2d780855-622e-4e6b-a384-6342d81309ff" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

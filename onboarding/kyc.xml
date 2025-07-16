@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="kyc" path="kyc" id="eb036d34-ea70-488b-96ef-6b407f2c1a21">
+  <con:settings id="8db6681d-de89-4b3d-b800-588b1a49882d">
+    <con:setting id="eb036d34-ea70-488b-96ef-6b407f2c1a21fileName">kyc</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="7adc3f5a-d6bc-4c50-946e-fae01f1542e6" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="668ee1ee-9930-4697-8ed7-b138c11eac79" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request>{
+  "kycId": "KYC001",
+  "customerId": "CUST001",
+  "documentType": "Aadhar",
+  "documentNumber": "1234-5678-9012"
+}</con:request>
+      <con:originalUri>http://localhost/kyc</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="9bea480a-dc82-475a-8c7f-e33bbda69d45" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="ee802e84-a308-4ada-a40b-b39d452df122" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8088/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

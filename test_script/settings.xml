@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockService xmlns:con="http://eviware.com/soapui/config" id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4" port="8081" path="/" host="localhost" name="test_script" addUnmatchedOperation="false">
-  <con:settings id="79b4898a-e7e2-4d76-84d7-eceb9be23b97">
+<con:restMockService xmlns:con="http://eviware.com/soapui/config" addUnmatchedOperation="false" host="localhost" id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4" name="test_script" path="/" port="8081">
+  <con:settings id="4b70e33d-2446-4aa6-8bf0-faf5b32f8759">
     <con:setting id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4fileName">test_script</con:setting>
   </con:settings>
   <con:properties/>

@@ -1,7 +1,8 @@
-onboarding\customer.xml
 onboarding\accounts.xml
 onboarding\branch.xml
+onboarding\customer.xml
 onboarding\kyc.xml
 onboarding-Virtual-Service\%2Fgetcustomer.xml
 onboarding-Virtual-Service\%2Fgetcustomerbal.xml
+onboarding-Virtual-Service\%2Fgetbranch.xml
 test_script\%2FcreateCustomer.xml

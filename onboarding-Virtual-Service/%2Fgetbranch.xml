@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" name="/getbranch" method="GET" resourcePath="/getbranch" id="91318f4f-fcaf-4286-ac57-921a9fb02a03">
+  <con:settings id="2de239ab-ccce-4d59-a693-14b29dbcd82f">
+    <con:setting id="803e1225-dcf9-4757-a184-067de8c7e643fileName">%2Fgetcustomer</con:setting>
+    <con:setting id="91318f4f-fcaf-4286-ac57-921a9fb02a03fileName">%2Fgetbranch</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchPath>import groovy.sql.Sql
+import groovy.json.JsonBuilder
+
+def dbUrl = "jdbc:mysql://127.0.0.1:3306/banking?useSSL=false"
+def user = "root"
+def pass = "root"
+def driver = "com.mysql.cj.jdbc.Driver"
+
+try {
+    def sql = Sql.newInstance(dbUrl, user, pass, driver)
+    def customers = sql.rows("SELECT * FROM branches")
+    def json = new JsonBuilder(customers).toPrettyString()
+
+    context.setProperty("customerResponse", json)
+
+    return "Response 1"
+} catch (Exception e) {
+    context.setProperty("customerResponse", "{\"error\": \"${e.message}\"}")
+    return "Response 1"
+}</con:dispatchPath>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer/>
+  <con:requestRouteScript/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="94bd7cfe-e259-4c19-aea1-48578ef3c279" httpResponseStatus="200" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:script>def json = context.getProperty("customerResponse")
+
+mockResponse.responseHeaders = ["Content-Type": ["application/json"]]
+mockResponse.responseContent = json</con:script>
+    <con:responseContent>[
+    {
+        "id": 1,
+        "branchCode": "BR001",
+        "branchName": "Connaught Place Branch",
+        "city": "Delhi",
+        "state": "Delhi",
+        "customer_id": 1,
+        "customerNumber": "CUST100027"
+    },
+    {
+        "id": 2,
+        "branchCode": "BR002",
+        "branchName": "MG Road Branch",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "customer_id": 2,
+        "customerNumber": "CUST100028"
+    },
+    {
+        "id": 3,
+        "branchCode": "BR003",
+        "branchName": "Park Street Branch",
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "customer_id": 3,
+        "customerNumber": "CUST100029"
+    },
+    {
+        "id": 4,
+        "branchCode": "BR004",
+        "branchName": "Bandra West Branch",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "customer_id": 4,
+        "customerNumber": "CUST100030"
+    },
+    {
+        "id": 5,
+        "branchCode": "BR005",
+        "branchName": "Anna Nagar Branch",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "customer_id": 5,
+        "customerNumber": "CUST100031"
+    },
+    {
+        "id": 6,
+        "branchCode": "BR006",
+        "branchName": "Hitech City Branch",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "customer_id": 6,
+        "customerNumber": "CUST100033"
+    }
+]</con:responseContent>
+    <con:header>
+      <con:name>Content-Type</con:name>
+      <con:value>application/json</con:value>
+    </con:header>
+  </con:response>
+</con:restMockAction>

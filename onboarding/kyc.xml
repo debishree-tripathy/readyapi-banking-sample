@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:con="http://eviware.com/soapui/config" id="eb036d34-ea70-488b-96ef-6b407f2c1a21" name="kyc" path="kyc">
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="eb036d34-ea70-488b-96ef-6b407f2c1a21" name="kyc" path="kyc">
   <con:settings id="b6f37750-1c76-4d81-bf0a-31d40ea41808">
     <con:setting id="eb036d34-ea70-488b-96ef-6b407f2c1a21fileName">kyc</con:setting>
   </con:settings>

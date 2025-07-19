@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project xmlns:con="http://eviware.com/soapui/config" activeEnvironment="Default environment" compositeProjectFormat="1.3" created="3.61.0" encryptionMode="Not encrypted" id="d3f02990-c139-4e54-843a-95a21e6a0585" name="BankingSimulation" projectVersion="" resourceRoot="" updated="3.56.0" abortOnError="false" runType="SEQUENTIAL">
+<con:soapui-project xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" activeEnvironment="Default environment" compositeProjectFormat="1.3" created="3.61.0" encryptionMode="Not encrypted" id="d3f02990-c139-4e54-843a-95a21e6a0585" name="BankingSimulation" projectVersion="" resourceRoot="" updated="3.56.0" abortOnError="false" runType="SEQUENTIAL">
   <con:settings>
     <con:setting id="d3f02990-c139-4e54-843a-95a21e6a0585fileName">BankingSimulation-readyapi-project</con:setting>
   </con:settings>
@@ -19,7 +19,27 @@
       <con:connectionProperties/>
     </con:databaseConnection>
   </con:databaseConnectionContainer>
-  <con:jmsConnectionContainer/>
+  <con:jmsConnectionContainer>
+    <con:jmsConnection>
+      <con:name>ActiveMQ</con:name>
+      <con:connectorLabel xsi:nil="true"/>
+      <con:initialContextFactory>org.apache.activemq.jndi.ActiveMQInitialContextFactory</con:initialContextFactory>
+      <con:providerUrl>tcp://127.0.0.1:61616</con:providerUrl>
+      <con:connectionFactory>ConnectionFactory</con:connectionFactory>
+      <con:username>admin</con:username>
+      <con:password>admin</con:password>
+      <con:extraProperties>
+        <con:property>
+          <con:name>queue.CustomerQueue</con:name>
+          <con:value>CustomerQueue</con:value>
+        </con:property>
+        <con:property>
+          <con:name>queue.CustomerResponseQueue</con:name>
+          <con:value>CustomerResponseQueue</con:value>
+        </con:property>
+      </con:extraProperties>
+    </con:jmsConnection>
+  </con:jmsConnectionContainer>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
   <con:eventHandlers name="RequestFilter.filterRequest" type="RequestFilter.filterRequest">
@@ -51,6 +71,29 @@
 // pw.close()
 // fos.close()</con:script>
   </con:eventHandlers>
+  <con:environment id="64c872e0-816c-4e31-b0c3-713460ae067a" name="dev" index="0">
+    <con:property>
+      <con:name>lastCustomerNumber</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>local</con:name>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer>
+      <con:jmsConnection>
+        <con:name>ActiveMQ</con:name>
+        <con:extraProperties/>
+      </con:jmsConnection>
+    </con:jmsConnectionContainer>
+  </con:environment>
   <con:authRepository/>
+  <con:environmentSpec>
+    <con:entry environmentId="64c872e0-816c-4e31-b0c3-713460ae067a">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
   <con:tags/>
 </con:soapui-project>

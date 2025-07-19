@@ -12,5 +12,12 @@
   </con:definitionCache>
   <con:endpoints>
     <con:endpoint>http://localhost:8088/</con:endpoint>
+    <con:endpoint>readyjms://ActiveMQ::CustomerQueue::CustomerResponseQueue</con:endpoint>
+    <con:endpoint>readyjms://ActiveMQ::CustomerResponseQueue::CustomerQueue</con:endpoint>
   </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="64c872e0-816c-4e31-b0c3-713460ae067a">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
 </con:interface>

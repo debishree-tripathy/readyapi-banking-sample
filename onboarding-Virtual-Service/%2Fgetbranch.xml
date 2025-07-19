@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockAction xmlns:con="http://eviware.com/soapui/config" id="91318f4f-fcaf-4286-ac57-921a9fb02a03" method="GET" name="/getbranch" resourcePath="/getbranch">
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="91318f4f-fcaf-4286-ac57-921a9fb02a03" method="GET" name="/getbranch" resourcePath="/getbranch">
   <con:settings id="67111e35-d2ee-4c0b-936d-07859e7e072d">
     <con:setting id="803e1225-dcf9-4757-a184-067de8c7e643fileName">%2Fgetcustomer</con:setting>
     <con:setting id="91318f4f-fcaf-4286-ac57-921a9fb02a03fileName">%2Fgetbranch</con:setting>

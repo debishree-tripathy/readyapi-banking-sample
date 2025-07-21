@@ -13,7 +13,7 @@
         <con:endpoint>readyjms://ActiveMQ::CustomerQueue::CustomerResponseQueue</con:endpoint>
         <con:request>{
   "name": "Shiva Shankar",
-  "email": "Baba@gmail.com",
+  "email": "shiva.shankar@gmail.com",
   "dob": "1994-02-10",
   "panNumber": "ADITY1124C"
 }</con:request>
@@ -32,6 +32,65 @@
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="ValidateAndInsert" id="0753e271-e094-4bf9-8bb6-4e71ecacbdbe">
+    <con:settings/>
+    <con:config>
+      <script>import groovy.json.JsonSlurper
+import java.sql.*
+
+// ---------- DB CONFIG ----------
+def dbUrl = "jdbc:mysql://127.0.0.1:3306/banking?useSSL=false"
+def user = "root"
+def pass = "root"
+def driver = "com.mysql.cj.jdbc.Driver"
+// -------------------------------
+
+// Step 1: Parse JSON from JMS POST request
+def request = context.expand('${CustomerQueue#Request}')
+def json = new JsonSlurper().parseText(request)
+
+// Step 2: Validate required fields
+if (!json.name || !json.email || !json.dob || !json.panNumber) {
+    throw new AssertionError("❌ Validation Failed: Missing required fields.")
+}
+
+// Step 3: Validate Email
+def emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
+if (!json.email.matches(emailPattern)) {
+    throw new AssertionError("❌ Validation Failed: Invalid Email format")
+}
+
+// Step 4: Validate PAN
+def panPattern = /^[A-Z]{5}[0-9]{4}[A-Z]$/
+if (!json.panNumber.matches(panPattern)) {
+    throw new AssertionError("❌ Validation Failed: Invalid PAN format")
+}
+
+log.info "✅ Validation passed. Inserting into DB..."
+
+// Step 5: Load driver and connect to DB
+Class.forName(driver)
+def conn = DriverManager.getConnection(dbUrl, user, pass)
+
+// Step 6: Insert into DB
+def stmt = conn.prepareStatement("""
+    INSERT INTO customer (name, email, dob, panNumber)
+    VALUES (?, ?, ?, ?)
+""")
+stmt.setString(1, json.name)
+stmt.setString(2, json.email)
+stmt.setDate(3, java.sql.Date.valueOf(json.dob))
+stmt.setString(4, json.panNumber)
+
+stmt.executeUpdate()
+
+// Step 7: Cleanup
+stmt.close()
+conn.close()
+
+log.info "✅ Customer inserted successfully: ${json.name}"</script>
     </con:config>
   </con:testStep>
   <con:testStep type="JMS" name="ReadCustomerQueue" id="4eb4f3ed-8091-4a39-bce5-014c52f71fff">

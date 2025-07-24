@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="3e7e8d88-ab0f-4074-b8dc-3821423ebe53" name="CustomerSuite">
-  <con:settings id="4664da23-39da-4922-a07b-60c50d608073">
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="3e7e8d88-ab0f-4074-b8dc-3821423ebe53" name="CustomerSuite">
+  <con:settings id="32483134-201d-492a-b08d-d9b9ea37ce71">
     <con:setting id="3e7e8d88-ab0f-4074-b8dc-3821423ebe53fileName">CustomerSuite</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>

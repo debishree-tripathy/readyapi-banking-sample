@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockAction xmlns:con="http://eviware.com/soapui/config" id="91318f4f-fcaf-4286-ac57-921a9fb02a03" method="GET" name="/getbranch" resourcePath="/getbranch">
-  <con:settings id="90abe346-0faa-48a1-acfc-67bd3974e450">
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" id="fb8d1db4-9d37-4ff0-8728-6e982c35c6ea" method="GET" name="/getbranch" resourcePath="/getbranch">
+  <con:settings id="5f09ae40-53c8-455e-9ede-d914d56fbafd">
     <con:setting id="803e1225-dcf9-4757-a184-067de8c7e643fileName">%2Fgetcustomer</con:setting>
     <con:setting id="91318f4f-fcaf-4286-ac57-921a9fb02a03fileName">%2Fgetbranch</con:setting>
+    <con:setting id="fb8d1db4-9d37-4ff0-8728-6e982c35c6eafileName">%2Fgetbranch1</con:setting>
   </con:settings>
   <con:dispatchStyle>SCRIPT</con:dispatchStyle>
   <con:dispatchConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -29,7 +30,7 @@ try {
   <con:dispatchXPath/>
   <con:parameterDispatcherRuleContainer/>
   <con:routeScript/>
-  <con:response compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="" httpResponseStatus="200" id="94bd7cfe-e259-4c19-aea1-48578ef3c279" mediaType="application/json" name="Response 1">
+  <con:response compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="" httpResponseStatus="200" id="c8fd783b-e9d5-4dc7-a869-7fda7ddda8de" mediaType="application/json" name="Response 1">
     <con:settings/>
     <con:script>def json = context.getProperty("customerResponse")
 

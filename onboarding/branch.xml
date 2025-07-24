@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="b20af000-bc5d-4be5-977b-ec4702abb371" name="branch" path="branch">
-  <con:settings id="df187a70-c7d3-4d57-a491-0a1be22738dc">
+<con:resource xmlns:con="http://eviware.com/soapui/config" id="b20af000-bc5d-4be5-977b-ec4702abb371" name="branch" path="branch">
+  <con:settings id="218bcfb3-6080-43a0-aeee-febe492a2fc8">
     <con:setting id="b20af000-bc5d-4be5-977b-ec4702abb371fileName">branch</con:setting>
   </con:settings>
   <con:parameters/>

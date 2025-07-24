@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockAction xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="f7de604a-fd5e-4f0f-b311-a4bbc873724c" method="POST" name="/createCustomer" resourcePath="/createCustomer">
-  <con:settings id="b8ff8210-8848-4a9e-b51d-bd4243f68078">
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" id="f7de604a-fd5e-4f0f-b311-a4bbc873724c" method="POST" name="/createCustomer" resourcePath="/createCustomer">
+  <con:settings id="ea815ea4-09c0-4f66-b0c8-aa7663e008cf">
     <con:setting id="f7de604a-fd5e-4f0f-b311-a4bbc873724cfileName">%2FcreateCustomer</con:setting>
   </con:settings>
   <con:defaultResponse>error</con:defaultResponse>
   <con:dispatchStyle>SCRIPT</con:dispatchStyle>
-  <con:dispatchConfig/>
+  <con:dispatchConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
   <con:dispatchPath><![CDATA[import groovy.json.JsonSlurper
 import groovy.sql.Sql
 import groovy.json.JsonBuilder

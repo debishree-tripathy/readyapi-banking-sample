@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="0a5cbf03-21fe-42c5-aebb-1c8e51a56d80" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="CustomerJMSlow" searchProperties="true" timeout="0">
-  <con:settings id="0ca2d625-7da5-4cee-8263-c35368bf8c9a">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" id="0a5cbf03-21fe-42c5-aebb-1c8e51a56d80" keepSession="false" name="CustomerJMSlow" searchProperties="true" timeout="0">
+  <con:settings id="20047478-47fe-4d8b-a94c-6ef959e70f87">
     <con:setting id="0a5cbf03-21fe-42c5-aebb-1c8e51a56d80fileName">CustomerJMSlow</con:setting>
   </con:settings>
-  <con:testStep type="JMS" name="CustomerQueue" id="a0ed7fc3-df30-4f1d-8c84-2209fc9aa52f">
+  <con:testStep id="a0ed7fc3-df30-4f1d-8c84-2209fc9aa52f" name="CustomerQueue" type="JMS">
     <con:settings/>
-    <con:config service="onboarding" resourcePath="/customer" methodName="Method 1" xsi:type="con:RestRequestStep">
+    <con:config xsi:type="con:RestRequestStep" methodName="Method 1" resourcePath="/customer" service="onboarding">
       <con:restRequest id="16dd33ef-b0dc-4b65-af3a-9dbd8e0b23b0" mediaType="application/json" name="Request 1" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -34,7 +34,7 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="ValidateAndInsert" id="0753e271-e094-4bf9-8bb6-4e71ecacbdbe">
+  <con:testStep id="0753e271-e094-4bf9-8bb6-4e71ecacbdbe" name="ValidateAndInsert" type="groovy">
     <con:settings/>
     <con:config>
       <script>import groovy.json.JsonSlurper
@@ -93,9 +93,9 @@ conn.close()
 log.info "Customer inserted successfully: ${json.name}"</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="JMS" name="ReadCustomerQueue" id="4eb4f3ed-8091-4a39-bce5-014c52f71fff">
+  <con:testStep id="4eb4f3ed-8091-4a39-bce5-014c52f71fff" name="ReadCustomerQueue" type="JMS">
     <con:settings/>
-    <con:config service="onboarding" resourcePath="/customer" methodName="Method 2" xsi:type="con:RestRequestStep">
+    <con:config xsi:type="con:RestRequestStep" methodName="Method 2" resourcePath="/customer" service="onboarding">
       <con:restRequest id="3b3836bc-e194-4cf2-843f-9f4d8af50767" mediaType="application/json" name="Request 1">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

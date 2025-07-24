@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:interface xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestService" id="bc9d9d3a-e159-4d14-81d4-aa07433ea9b8" name="onboarding" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification">
-  <con:settings id="2274fa83-dfad-4148-92f4-f779c36e51f8">
+  <con:settings id="cee2f910-4af4-4f63-ac9c-ec2cb76a50cc">
     <con:setting id="bc9d9d3a-e159-4d14-81d4-aa07433ea9b8fileName">onboarding</con:setting>
   </con:settings>
   <con:definitionCache rootPart="onboarding.json" type="TEXT">

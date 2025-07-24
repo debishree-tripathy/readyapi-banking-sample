@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockAction xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="803e1225-dcf9-4757-a184-067de8c7e643" method="GET" name="/getcustomer" resourcePath="/getcustomer">
-  <con:settings id="4aef2b2d-3c60-46e1-b2bc-0379d8339b18">
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" id="803e1225-dcf9-4757-a184-067de8c7e643" method="GET" name="/getcustomer" resourcePath="/getcustomer">
+  <con:settings id="9d7b24fd-8ca1-4acb-9a20-793f2ab16a52">
     <con:setting id="803e1225-dcf9-4757-a184-067de8c7e643fileName">%2Fgetcustomer</con:setting>
   </con:settings>
   <con:dispatchStyle>SCRIPT</con:dispatchStyle>
-  <con:dispatchConfig/>
+  <con:dispatchConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
   <con:dispatchPath>import groovy.sql.Sql
 import groovy.json.JsonBuilder
 

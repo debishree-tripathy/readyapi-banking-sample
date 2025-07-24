@@ -4,6 +4,7 @@ onboarding\customer.xml
 onboarding\kyc.xml
 CustomerSuite\CustomerJMSlow.xml
 onboarding-Virtual-Service\%2Fgetbranch.xml
+onboarding-Virtual-Service\%2Fgetbranch1.xml
 onboarding-Virtual-Service\%2Fgetcustomer.xml
 onboarding-Virtual-Service\%2Fgetcustomerbal.xml
 test_script\%2FcreateCustomer.xml

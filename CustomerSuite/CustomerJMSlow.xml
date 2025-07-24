@@ -12,10 +12,10 @@
         </con:settings>
         <con:endpoint>readyjms://ActiveMQ::CustomerQueue::CustomerResponseQueue</con:endpoint>
         <con:request>{
-  "name": "Aditya Kumar",
-  "email": "aditya.kumar@gmail.com",
+  "name": "Rosalin Sharma",
+  "email": "rosalin@gmail.com",
   "dob": "1994-02-10",
-  "panNumber": "BNGPT4133B"
+  "panNumber": "BNGPT4133Q"
 }</con:request>
         <con:originalUri>http://localhost/customer</con:originalUri>
         <con:credentials>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockService xmlns:con="http://eviware.com/soapui/config" addUnmatchedOperation="false" host="localhost" id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4" name="test_script" path="/" port="8081">
+<con:restMockService xmlns:con="http://eviware.com/soapui/config" addUnmatchedOperation="false" host="localhost" id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4" name="test_script" path="/banking" port="8081">
   <con:settings id="4cbd8b4e-c6f3-4e0d-8a71-3c835d62a65e">
     <con:setting id="5e0bbf1c-02cb-4a33-9c25-28971186a3b4fileName">test_script</con:setting>
   </con:settings>
